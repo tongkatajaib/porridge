@@ -1,0 +1,26 @@
+syntax on
+filetype plugin indent on
+
+set nocompatible   
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+nnoremap <F2> :w<CR>
+inoremap <F2> <Esc>:w<CR>a
+
+inoremap ww <Esc>:w<CR>
+nnoremap WW :w<CR>
+
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+
+let mapleader = ";"
+
+map <leader>n :bnext<CR>
+map <leader>p :bprevious<CR>
+map <leader>d :bw<CR>
+
+

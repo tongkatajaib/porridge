@@ -1,0 +1,46 @@
+#!/usr/bin/bash
+
+## PROMPT
+alias grep='grep --color=auto'
+PS1="\[\033[0;35m\]\A \[\033[0;32m\]\u\[\033[0;33m\]@\[\033[0;37m\]\h \w\[\033[0m\]\n\[\033[0;36m\]\$\[\033[0m\] "
+
+
+## Abbreviation & misc
+alias man='$MANPAGER'
+alias sudo='sudo '
+alias e='$EDITOR'
+alias v='$EDITOR' 
+alias pwf='poweroff'
+alias shunow='shutdown now'
+alias chkz='du -sh '
+alias denv="deactivate"
+alias python="python3 "
+alias ds='dnf search '
+alias dins='sudo dnf install '
+
+
+### IF YOU AREN'T ME, REMOVE THESE!
+## Personal-server access command
+alias srv='ssh srv'
+alias vir='virsh -c lab'
+
+
+
+## verbosity
+alias \
+	cp='cp -iv' \
+	mv='mv -iv' \
+	rm='rm -vI'
+
+
+## ls variants
+alias ls='ls --color=auto --group-directories-first'
+alias l.='ls -d .* --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -a --color=auto'
+alias lal='ls -la --color=auto'
+
+
+
+# Additional
+alias info='info --vi-keys' # info with vi-keys
